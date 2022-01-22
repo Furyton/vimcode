@@ -1,11 +1,14 @@
 #!/bin/bash
-# install vim plug manager
+
+# Install vim plug manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://gitee.com/astroshot/vim-plug/blob/master/plug.vim
 cp .vimrc ~/
 vim +'PlugInstall --sync' +qa
 vim +'CocInstall coc-json coc-tsserver' +qa
-# install node, comment following code if you already have.
-# this will take really long time.... be patient
+
+# Install node.js, comment following code if you don't need it.
+# This will take really long time.... be patient
+# For more details, see https://askubuntu.com/a/982003
 if ! command -v node &> /dev/null
 then
     echo "node could not be found, assume you use bash and not a sudo user"
