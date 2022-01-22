@@ -13,7 +13,7 @@ sudo apt install ripgrep
 ```
 ## display
 
-on its way...
+![display](./display.gif)
 
 ## interesting shortcut
 
