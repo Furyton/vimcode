@@ -27,7 +27,7 @@ nnoremap <Esc>k :m -2<CR>
 nmap <C-_>   <Plug>NERDCommenterToggle
 vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 " fzf
-nnoremap <silent> <Leader>f :Rg<CR>
+nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>/ :BLines<CR>
 " hide highlight
