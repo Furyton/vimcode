@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install vim plug manager
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://gitee.com/astroshot/vim-plug/blob/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp .vimrc ~/
 vim +'PlugInstall --sync' +qa
 vim +'CocInstall coc-json coc-tsserver' +qa
