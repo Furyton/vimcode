@@ -15,17 +15,17 @@ Plug 'https://gitee.com/zhengqijun/vim-surround'
 call plug#end()
 
 if (empty($TMUX))
-   if (has("nvim"))
-     "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-   endif
-   "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-   "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-   " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-   if (has("termguicolors"))
-     set termguicolors
-   endif
- endif
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 set background=dark
 
 colorscheme OceanicNext
@@ -50,6 +50,14 @@ nnoremap <esc><esc> :noh<return><esc>
 " use jk to esc in insert mode
 " short cut: you can't type jk that easy...
 inoremap jk <esc>
+
+" manually added plugin
+" used for deleting current buffer but not closing the window, along with
+" other features
+" see https://vim.fandom.com/wiki/Deleting_a_buffer_without_closing_the_window
+" for more inforation
+nmap <C-W>! <Plug>Kwbd
+
 set autoindent
 set backspace=indent,eol,start
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow

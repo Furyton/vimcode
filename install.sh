@@ -5,6 +5,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 cp .vimrc ~/
 vim +'PlugInstall --sync' +qa
 vim +'CocInstall coc-json coc-tsserver' +qa
+cp -r plugin/ ~/.vim
 
 # Install node.js, comment following code if you don't need it.
 # This will take really long time.... be patient
